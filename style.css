@@ -1,0 +1,66 @@
+:root{
+    --bg1:#0b0710;
+    --bg2:#6d2a4b;
+    --accent:#ff7bb0;
+    --muted:#cfc9d3;
+    --glass:rgba(255,255,255,0.04);
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family: 'Montserrat', sans-serif;color:white}
+body{background:linear-gradient(90deg,var(--bg1),#180916 40%, var(--bg2));overflow-x:hidden}
+.page-bg{position:fixed;inset:0;z-index:0;pointer-events:none;filter:blur(40px);opacity:0.25;background:radial-gradient(circle at 85% 20%, rgba(255,123,176,0.25), transparent 8%), radial-gradient(circle at 15% 85%, rgba(0,0,0,0.4), transparent 8%)}
+.site-header{position:relative;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:28px 40px}
+.logo-wrap{display:flex;flex-direction:column}
+.brand{font-family:'Great Vibes', cursive;font-size:48px;margin:0;color:var(--accent);text-shadow:0 6px 24px rgba(109,42,75,0.45)}
+.sub{letter-spacing:4px;color:var(--muted);font-weight:600}
+.contact-nav a{margin-left:12px;text-decoration:none}
+.btn-cta{background:#ff3f8a;padding:10px 16px;border-radius:8px;color:white;font-weight:700;box-shadow:0 8px 30px rgba(255,63,138,0.16)}
+.btn-ghost{border:1px solid rgba(255,255,255,0.08);padding:8px 12px;border-radius:8px;color:var(--muted);background:transparent}
+
+.container{position:relative;z-index:5;max-width:1100px;margin:30px auto;padding:30px}
+.hero{display:flex;gap:40px;align-items:flex-start}
+.hero-left{flex:1;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;backdrop-filter:blur(6px);box-shadow:0 10px 30px rgba(0,0,0,0.6);transform:translateY(20px);opacity:0;transition:all .9s ease}
+.hero-left.in{transform:none;opacity:1}
+.hero-badge{display:inline-block;background:var(--accent);color:#21020b;padding:8px 18px;border-radius:14px;font-weight:700;margin-bottom:14px}
+.hero-text{font-size:18px;color:var(--muted);line-height:1.4}
+.prices ul{list-style:none;padding:18px 0;margin:0}
+.prices li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed rgba(255,255,255,0.03);color:var(--muted)}
+.primary-cta{display:inline-block;margin-top:18px;background:transparent;border:2px solid var(--accent);color:var(--accent);padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:700;transition:all .25s}
+.primary-cta:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(109,42,75,0.2)}
+
+.hero-right{width:360px;display:flex;flex-direction:column;gap:20px;align-items:center}
+.portrait{width:260px;height:260px;border-radius:50%;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,0.6);border:8px solid rgba(255,255,255,0.03);transform:translateY(0);animation:float 6s ease-in-out infinite}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block}
+.side-gallery{display:flex;flex-direction:column;gap:12px}
+.side-gallery img{width:72px;height:72px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,0.03);transition:transform .3s, box-shadow .3s}
+.side-gallery img:hover{transform:scale(1.06);box-shadow:0 12px 30px rgba(0,0,0,0.6)}
+
+.maintenance{margin-top:30px;padding:22px;background:var(--glass);border-radius:12px;transform:translateY(20px);opacity:0;transition:all .9s ease}
+.maintenance.in{transform:none;opacity:1}
+.section-title{font-family:'Great Vibes',cursive;font-size:34px;color:var(--accent);margin-bottom:12px}
+
+.contact{margin-top:28px;text-align:center;padding:26px;border-radius:12px}
+.contact p{margin:6px 0;color:var(--muted)}
+.ig a{color:#fff;text-decoration:none;font-weight:700;padding:6px 10px;background:rgba(0,0,0,0.25);border-radius:6px}
+.btn-cta.big{display:inline-block;margin-top:12px}
+
+.site-footer{text-align:center;padding:18px;color:rgba(255,255,255,0.4)}
+
+@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+
+/* responsive */
+@media(max-width:900px){
+    .hero{flex-direction:column-reverse}
+    .hero-right{width:100%;flex-direction:row;justify-content:space-between}
+    .portrait{width:140px;height:140px}
+}
+
+@media(max-width:520px){
+    .container{padding:16px}
+    .brand{font-size:36px}
+    .hero-left{padding:18px}
+    .prices li{font-size:14px}
+}
+
+/* small reveal animation helper */
+.hero-left.in, .maintenance.in, .hero-right.in{opacity:1;transform:none}

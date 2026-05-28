@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rayslash</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+</head>
+<body>
+    <div class="page-bg"></div>
+    <header class="site-header">
+        <div class="logo-wrap">
+            <h1 class="brand">Rayssa</h1>
+            <div class="sub">Lash Designer</div>
+        </div>
+        <nav class="contact-nav">
+            <a class="btn-cta" href="tel:+5511954439350">AGENDE AGORA!</a>
+            <a class="btn-ghost" href="https://wa.me/5511954439350" target="_blank">WhatsApp</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-left">
+                <div class="hero-badge">Aplicação</div>
+                <p class="hero-text">Transforme seu olhar com extensões de cílios profissionais — natural, volume e formatos personalizados.</p>
+                <div class="prices">
+                    <ul>
+                        <li><span>Volume Brasileiro</span><span>R$ 80,00</span></li>
+                        <li><span>Mega Brasileiro</span><span>R$ 100,00</span></li>
+                        <li><span>Volume Egípcio</span><span>R$ 110,00</span></li>
+                        <li><span>Mega Egípcio</span><span>R$ 120,00</span></li>
+                        <li><span>Volume Inglês</span><span>R$ 130,00</span></li>
+                        <li><span>Volume Fox</span><span>R$ 150,00</span></li>
+                    </ul>
+                </div>
+                <a class="primary-cta" href="#contact">Quero agendar</a>
+            </div>
+            <div class="hero-right">
+                <div class="portrait">
+                    <img src="assets/photo1.png" alt="Rayssa - lash designer">
+                </div>
+                <div class="side-gallery">
+                    <img src="assets/photo3.png" alt="work 2">
+                    <img src="assets/photo4.png" alt="work 3">
+                    <img src="assets/photo5.png" alt="work 4">
+                </div>
+            </div>
+        </section>
+
+        <section class="maintenance">
+            <div class="section-title">Manutenção</div>
+            <div class="prices">
+                <ul>
+                    <li><span>Volume Brasileiro</span><span>R$ 50,00</span></li>
+                    <li><span>Mega Brasileiro</span><span>R$ 70,00</span></li>
+                    <li><span>Volume Egípcio</span><span>R$ 80,00</span></li>
+                    <li><span>Mega Egípcio</span><span>R$ 90,00</span></li>
+                    <li><span>Volume Inglês</span><span>R$ 100,00</span></li>
+                    <li><span>Volume Fox</span><span>R$ 110,00</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <p class="ig">INSTAGRAM: <a href="https://instagram.com/byrayslash_" target="_blank">@byrayslash_</a></p>
+            <p>ACEITAMOS DINHEIRO, CARTÕES E PIX</p>
+            <a class="btn-cta big" href="tel:+5511954439350">AGENDE AGORA!</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <small>© Rayssa Lash Designer — Criado com carinho</small>
+    </footer>
+
+    <script>
+        // small reveal animation when scrolling
+        document.addEventListener('DOMContentLoaded', ()=>{
+            const reveals = document.querySelectorAll('.hero-left, .hero-right, .maintenance, .contact');
+            const obs = new IntersectionObserver((entries)=>{
+                entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); });
+            },{threshold:0.15});
+            reveals.forEach(r=>obs.observe(r));
+        });
+    </script>
+</body>
+</html>
+</html>
