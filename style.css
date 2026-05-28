@@ -11,7 +11,8 @@ body{background:linear-gradient(90deg,var(--bg1),#180916 40%, var(--bg2));overfl
 .page-bg{position:fixed;inset:0;z-index:0;pointer-events:none;filter:blur(40px);opacity:0.25;background:radial-gradient(circle at 85% 20%, rgba(255,123,176,0.25), transparent 8%), radial-gradient(circle at 15% 85%, rgba(0,0,0,0.4), transparent 8%)}
 .site-header{position:relative;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:28px 40px}
 .logo-wrap{display:flex;flex-direction:column}
-.brand{font-family:'Great Vibes', cursive;font-size:48px;margin:0;color:var(--accent);text-shadow:0 6px 24px rgba(109,42,75,0.45)}
+.brand{font-family:'Great Vibes', cursive;font-size:48px;margin:0;color:var(--accent);text-shadow:0 6px 24px rgba(109,42,75,0.45);display:flex;align-items:center;gap:10px}
+.brand-icon{display:inline-flex;justify-content:center;align-items:center;width:40px;height:40px;border:2px solid rgba(255,255,255,0.2);border-radius:50%;font-size:18px;color:white;background:rgba(255,255,255,0.05);box-shadow:0 8px 20px rgba(255,123,176,0.18)}
 .sub{letter-spacing:4px;color:var(--muted);font-weight:600}
 .contact-nav a{margin-left:12px;text-decoration:none}
 .btn-cta{background:#ff3f8a;padding:10px 16px;border-radius:8px;color:white;font-weight:700;box-shadow:0 8px 30px rgba(255,63,138,0.16)}
